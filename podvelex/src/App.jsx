@@ -1,6 +1,4 @@
 import { useState, useEffect } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import axios from "axios";
 
 function App() {
@@ -23,8 +21,11 @@ function App() {
         <div>
           <p className="text-sky-300">{fruits}</p>
           <p className="text-3xl">hello</p>
+          <button className="btn">yoo</button>
         </div>
       ))}
+
+      <div></div>
     </>
   );
 }
