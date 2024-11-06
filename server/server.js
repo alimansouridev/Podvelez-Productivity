@@ -11,9 +11,9 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 app.get("/api", (req, res) => {
-  res.json({ fruits: ["test1", "test2", "test3", "test4", "test5"] });
+  res.json({ fruits: ["test1"] });
 });
 
-app.listen(8080, () => {
+app.listen(8081, () => {
   console.log("Server started on port 8080");
 });

@@ -6,7 +6,7 @@ function App() {
   const [array, setArray] = useState([]);
 
   const fetchAPI = async () => {
-    const response = await axios.get("http://localhost:8080/api");
+    const response = await axios.get("http://localhost:8081/api");
     setArray(response.data.fruits);
     console.log(response.data.fruits);
   };
@@ -16,17 +16,15 @@ function App() {
   }, []);
 
   return (
-    <>
-      {array.map((fruits, index) => (
-        <div>
-          <p className="text-sky-300">{fruits}</p>
-          <p className="text-3xl">hello</p>
-          <button className="btn">yoo</button>
+    <div className="overflow-x-hidden text-stone-300 antialiased">
+      <div className="fixed inset-0 -z-10">
+        <div class="relative h-full w-full bg-white">
+          <div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
         </div>
-      ))}
+      </div>
 
-      <div></div>
-    </>
+      <div className="container mx-auto px-8"></div>
+    </div>
   );
 }
 
